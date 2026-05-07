@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tariff Bot Demo</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f8fb;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #2563eb;
+        --border: #dbe2ef;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        color: var(--text);
+        background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1.25rem;
+        display: grid;
+        gap: 1rem;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      }
+
+      .hero {
+        padding: 1rem 1.2rem;
+      }
+
+      h1 {
+        margin: 0 0 0.4rem;
+        font-size: clamp(1.35rem, 2vw, 1.9rem);
+      }
+
+      p {
+        margin: 0.35rem 0;
+        color: var(--muted);
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 1rem;
+        align-items: start;
+      }
+
+      .examples {
+        padding: 1rem;
+      }
+
+      .example {
+        margin: 0 0 0.65rem;
+        padding: 0.65rem;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: #f8fafc;
+        font-size: 0.92rem;
+        overflow-wrap: anywhere;
+      }
+
+      .demo-frame {
+        padding: 0.8rem;
+      }
+
+      iframe {
+        width: 100%;
+        min-height: 70vh;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #fff;
+      }
+
+      @media (max-width: 900px) {
+        .content {
+          grid-template-columns: 1fr;
+        }
+
+        iframe {
+          min-height: 72vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card hero">
+        <h1>Tariff Bot Demo</h1>
+        <p>Try the standalone Dialogflow ES web demo below.</p>
+        <p>
+          Direct link:
+          <a href="https://bot.dialogflow.com/d86af826-29e9-4144-b03e-50a8cfb10272" target="_blank" rel="noopener noreferrer"
+            >https://bot.dialogflow.com/d86af826-29e9-4144-b03e-50a8cfb10272</a
+          >
+        </p>
+      </section>
+
+      <section class="content">
+        <aside class="card examples" aria-label="Example utterances">
+          <h2>Example utterances</h2>
+          <p>Select and copy any example to try in the bot:</p>
+          <p class="example">Set a tariff for weekdays from 7:00 to 18:00, max stay 2 hours, rate 3.00</p>
+          <p class="example">Set weekend tariff from 8am to 10pm at 4.50 per hour with a 3-hour max stay</p>
+          <p class="example">What are the current weekday parking tariff settings?</p>
+        </aside>
+
+        <div class="card demo-frame">
+          <iframe
+            title="Dialogflow ES Tariff Bot Demo"
+            src="https://bot.dialogflow.com/d86af826-29e9-4144-b03e-50a8cfb10272"
+            loading="lazy"
+            allow="microphone;"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
